@@ -1,13 +1,9 @@
-// const { createLambdaServer } = require("./bundle/server");
+const { createLocalServer } = require("../src/server");
 
 // const server = createLambdaServer();
 
 const getHandler = (event, context) => {
-  const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    debug: true,
-  });
+  const server = createLocalServer();
   const graphqlHandler = server.createHandler();
   if (!event.requestContext) {
     event.requestContext = context;
