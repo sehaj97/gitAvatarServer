@@ -38,6 +38,7 @@ function createLambdaServer() {
     resolvers,
     introspection: true,
     playground: true,
+    debug: true,
   });
 }
 
@@ -47,6 +48,7 @@ function createLocalServer() {
     resolvers,
     introspection: true,
     playground: true,
+    debug: true,
   });
 }
 
