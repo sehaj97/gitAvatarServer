@@ -1,10 +1,8 @@
-const { createLocalServer } = require("./bundle/server");
-
-// const server = createLambdaServer();
+const { createLambdaServer } = require("./bundle/server");
 
 const getHandler = (event, context) => {
-  const server = createLocalServer();
-  const graphqlHandler = server.createHandler();
+  const server = createLambdaServer();
+  const graphqlHandler = server.createHandler({ path: "/data" });
   if (!event.requestContext) {
     event.requestContext = context;
   }
