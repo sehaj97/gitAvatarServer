@@ -1,4 +1,4 @@
-const { createLocalServer } = require("../bundle/server");
+const { createLocalServer } = require("./bundle/server");
 
 // const server = createLambdaServer();
 
